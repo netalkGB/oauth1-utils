@@ -1,0 +1,34 @@
+{
+  "name": "oauth1-utils",
+  "version": "0.1.0",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    "import": "./lib/exportEsm.mjs",
+    "require": "./lib/index.js",
+    "node": "./lib/exportEsm.mjs",
+    "default": "./lib/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "cross-spawn-promise": "^0.10.2",
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.2",
+    "eslint-plugin-promise": "^6.0.0",
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "clean": "node script/clean.js",
+    "build": "node script/build.js",
+    "lint": "eslint --ext .ts,.js --ignore-path .eslintignore .",
+    "fmt": "eslint --ext .ts,.js --ignore-path .eslintignore . --fix"
+  }
+}
